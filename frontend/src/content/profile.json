@@ -1,0 +1,53 @@
+{
+  "name": "Aman Kumar",
+  "role": "Backend Engineer",
+  "positioning": "Backend engineer specializing in Python and Django systems that hold up under real production load.",
+  "location": "Bengaluru, India",
+  "currentRole": {
+    "title": "Software Developer",
+    "org": "Genpact",
+    "account": "GE Vernova",
+    "type": "Full-time"
+  },
+  "summary": "Backend Developer with 3+ years of experience designing scalable backend systems, REST APIs, and data-intensive applications. Skilled in Python, Django, PostgreSQL, Redis, system design, and AWS, with experience across high-throughput microservices and enterprise workloads.",
+  "currentlyBuilding": [
+    "Deepening system design and distributed-systems fundamentals for backend engineering interviews",
+    "Job Market Intelligence \u2014 scheduled data collection and structured job-market data pipeline",
+    "Job Apply Bot \u2014 automated role matching and resume-tailoring workflow"
+  ],
+  "contact": {
+    "email": "amankr9448@gmail.com",
+    "github": "https://github.com/amankr9448",
+    "linkedin": ""
+  },
+  "metrics": [
+    {
+      "value": "500K+",
+      "label": "requests / month"
+    },
+    {
+      "value": "60%",
+      "label": "query-time reduction"
+    },
+    {
+      "value": "40%",
+      "label": "database read reduction"
+    },
+    {
+      "value": "80%",
+      "label": "storage-cost reduction"
+    }
+  ],
+  "certifications": [
+    "Microsoft Certified: Azure Fundamentals (AZ-900)",
+    "Databricks Certified Data Engineer Associate",
+    "Agentic AI - Fundamentals",
+    "Generative AI - Fundamentals"
+  ],
+  "education": {
+    "institution": "Nitte Meenakshi Institute of Technology",
+    "degree": "Bachelor of Engineering in Computer Science",
+    "years": "2019 \u2013 2023",
+    "score": "CGPA: 8.51/10.0"
+  }
+}

@@ -1,0 +1,13 @@
+# Local environment and tool configuration
+.env
+.env.*
+!.env.example
+backend/.env
+.impeccable/config.local.json
+
+# Generated dependencies and build artifacts
+node_modules/
+frontend/.next/
+__pycache__/
+*.py[cod]
+*.sqlite3

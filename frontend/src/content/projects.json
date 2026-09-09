@@ -1,0 +1,109 @@
+[
+  {
+    "id": "ge-data-access",
+    "title": "GE Vernova — Data Access Portal",
+    "status": "Production",
+    "oneLiner": "Django backend for a financial visualization platform with natural-language query workflows and automated report migration.",
+    "problem": "Analysts needed a faster way to generate structured JSON templates and query cloud datasets, while a large report migration had to happen with minimal manual work.",
+    "solution": "Built Django REST APIs, SQL-to-JSON translation and validation pipelines, and automated migration scripts for templates and reports.",
+    "architecture": "Python/Django REST API over SQL-backed cloud datasets, with validation between natural-language-driven query intent and generated JSON structures.",
+    "decisions": [
+      { "question": "Why automate the migration?", "answer": "The migration involved 130+ blank templates and 10,000 associated reports, making scripted transfer more reliable and repeatable than manual movement." }
+    ],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "Query translation is only useful when paired with validation; correctness and predictable output matter as much as generation speed.",
+    "technologies": ["Python", "Django REST Framework", "SQL"],
+    "metrics": ["100+ users", "30% faster analysis", "10K reports migrated"]
+  },
+  {
+    "id": "ge-data-archival",
+    "title": "GE Vernova — Data Archival Portal",
+    "status": "Production",
+    "oneLiner": "Low-cost enterprise archival and search platform using S3 cold storage, Athena row-level security, and OpenSearch.",
+    "problem": "Enterprise project metadata and files needed cheaper long-term storage while remaining searchable and securely exportable.",
+    "solution": "Architected an S3-based archival workflow, implemented row-level security over Athena queries, and added paginated OpenSearch APIs for full-text retrieval.",
+    "architecture": "Django REST APIs coordinate archival metadata and secure query workflows across S3, Athena and OpenSearch, with pagination to keep large result sets predictable.",
+    "decisions": [
+      { "question": "Why combine S3, Athena and OpenSearch?", "answer": "The system needed inexpensive durable storage, SQL-style secure access to structured data, and low-friction full-text search for encrypted files." }
+    ],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "Storage, query and search concerns can be separated into fit-for-purpose services while the API layer provides a stable interface to clients.",
+    "technologies": ["Python", "Django REST Framework", "AWS S3", "AWS Athena", "OpenSearch"],
+    "metrics": ["80% lower storage cost", "230 projects", "6M files", "3M searchable files"]
+  },
+  {
+    "id": "ge-vernova-portal",
+    "title": "GE Vernova — Vernova Data Portal",
+    "status": "Production",
+    "oneLiner": "Backend revamp of a legacy enterprise portal around hierarchical domain-based access and embedded analytics.",
+    "problem": "The legacy portal needed a clearer access model and a modern backend foundation for embedded analytics and chatbot experiences.",
+    "solution": "Led the backend revamp, established hierarchical domain-based access, and integrated Tableau/Spotfire reports and a custom chatbot through iframes.",
+    "architecture": "Python/Django REST APIs provide the access-control and application layer while embedded analytics surfaces remain integrated into the portal UI.",
+    "decisions": [],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "A backend modernization is often as much about defining a clean access model as replacing implementation details.",
+    "technologies": ["Python", "Django REST Framework", "SQL", "AWS", "Tableau"],
+    "metrics": []
+  },
+  {
+    "id": "job-market-intelligence",
+    "title": "Job Market Intelligence",
+    "status": "In progress",
+    "oneLiner": "Scheduled Django data pipeline for collecting and structuring job-market intelligence.",
+    "problem": "Job-market research becomes difficult to compare when opportunities, requirements and market signals are collected manually and inconsistently.",
+    "solution": "A Django-based scheduled collection pipeline with a defined data schema and repeatable ingestion workflow.",
+    "architecture": "Django application with scheduled data collection and structured persistence. Detailed ingestion and storage decisions will be documented as the build progresses.",
+    "decisions": [],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "The project is intentionally being kept narrow until the core data pipeline is reliable.",
+    "technologies": ["Python", "Django", "PostgreSQL"],
+    "metrics": []
+  },
+  {
+    "id": "job-apply-bot",
+    "title": "Job Apply Bot",
+    "status": "Shipped",
+    "oneLiner": "Automated job-application workflow using scheduled GitHub Actions, tiered risk scoring, and Claude-powered resume tailoring.",
+    "problem": "Manual applications are slow and inconsistent when every role requires a separate evaluation and resume-tailoring step.",
+    "solution": "GitHub Actions scheduling triggers a tiered risk-scoring workflow; matched roles can receive Claude-tailored resume output before the application step.",
+    "architecture": "Scheduled automation → role evaluation → risk tier → tailored resume generation, with the workflow designed to separate low-risk automation from decisions that need review.",
+    "decisions": [
+      { "question": "Why a tiered risk model?", "answer": "Not every automated application action has the same downside, so the workflow separates lower-risk automation from higher-risk actions that should be reviewed." }
+    ],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "Automation should encode risk boundaries instead of treating every action as equally safe to execute unattended.",
+    "technologies": ["Python", "GitHub Actions", "Claude API"],
+    "metrics": []
+  },
+  {
+    "id": "the-paradigm-blog",
+    "title": "The Paradigm",
+    "status": "In progress",
+    "oneLiner": "Django + Next.js infrastructure for a technical publishing platform with structured content and an eventual grounded assistant.",
+    "problem": "Technical writing needs a content system that can grow beyond a collection of static pages without coupling the publishing model to the presentation layer.",
+    "solution": "Django provides the backend/content model while Next.js handles the public experience, keeping the architecture ready for richer knowledge features later.",
+    "architecture": "Django backend + Next.js frontend, with the content model separated from presentation and a future retrieval-grounded assistant planned around the stored knowledge.",
+    "decisions": [],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "Build the content foundation before adding intelligence features; a grounded assistant needs real, structured material to retrieve.",
+    "technologies": ["Django", "Next.js"],
+    "metrics": []
+  },
+  {
+    "id": "this-portfolio",
+    "title": "This Portfolio",
+    "status": "Shipped",
+    "oneLiner": "Static Next.js portfolio backed by Django for dynamic contact handling, designed as an evidence-linked engineering document.",
+    "problem": "A resume lists technologies but rarely shows the reasoning, constraints, or measurable outcomes behind them.",
+    "solution": "Static-export Next.js serves read-heavy portfolio content cheaply and quickly; Django is reserved for dynamic backend behavior such as contact handling and the future grounded assistant.",
+    "architecture": "JSON content → static Next.js pages → CDN-friendly output, with a separate Django API for dynamic behavior. Docker provides a repeatable local backend environment.",
+    "decisions": [
+      { "question": "Why static + Django API?", "answer": "Most portfolio content does not change per request, so static delivery is a better fit; Django remains only where server-side behavior adds value." },
+      { "question": "Why evidence links?", "answer": "The portfolio should make technical claims inspectable instead of asking a recruiter or interviewer to take them on faith." }
+    ],
+    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "lessons": "Content quality comes before the AI assistant: retrieval is only useful when there is real engineering material to ground it on.",
+    "technologies": ["Next.js", "Django", "PostgreSQL", "Redis", "Docker"],
+    "metrics": []
+  }
+]

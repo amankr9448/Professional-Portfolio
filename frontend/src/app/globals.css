@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  /* Cinematic dark palette */
+  --void: #0a0a0c;        /* page background */
+  --surface: #131316;     /* card/panel background */
+  --surface-hover: #1a1a1e;
+  --paper: #f2f1ec;       /* primary text on dark */
+  --steel: #6d8fb0;       /* interactive accent, lighter for dark bg contrast */
+  --slate: #6f7278;       /* secondary/meta text */
+  --ochre: #d7a63a;       /* evidence-link glow -- unchanged signal, brighter for dark */
+  --line: #232326;        /* hairline borders */
+
+  --font-display: Georgia, "Source Serif 4", "Iowan Old Style", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-paper: var(--paper);
+  --color-steel: var(--steel);
+  --color-slate: var(--slate);
+  --color-ochre: var(--ochre);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+  --font-body: var(--font-body);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--void);
+  color: var(--paper);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--steel);
+  outline-offset: 2px;
+}
+
+/* Evidence link glyph -- the recurring visual grammar for "claim -> proof" */
+.evidence-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  color: var(--steel);
+  text-decoration: none;
+  border-bottom: 1px solid var(--slate);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.evidence-link:hover {
+  border-bottom-color: var(--ochre);
+  color: var(--paper);
+}
+
+.evidence-link::before {
+  content: "⟶";
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--ochre);
+}
+
+/* Scroll-reveal: fade + slide up. Toggled by .in-view, added via a small
+   IntersectionObserver hook (see components/Reveal.tsx). Pure CSS
+   transition -- no animation library. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover-lift for cards -- the only motion on interaction, kept subtle */
+.lift {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lift:hover {
+  transform: translateY(-4px);
+  border-color: var(--slate);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Radial glow used behind the hero -- single static element, no animation
+   cost, just a large soft gradient */
+.hero-glow {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 0%,
+    rgba(109, 143, 176, 0.18),
+    transparent 70%
+  );
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+::selection {
+  background: var(--steel);
+  color: var(--paper);
+}

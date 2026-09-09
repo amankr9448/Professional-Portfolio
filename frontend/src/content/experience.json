@@ -1,0 +1,79 @@
+[
+  {
+    "id": "genpact",
+    "company": "Genpact",
+    "account": "GE Vernova",
+    "position": "Software Developer",
+    "duration": "Aug 2023 – Present",
+    "location": "Bengaluru, India",
+    "technologies": ["Python", "Django", "PostgreSQL", "Redis", "AWS", "Docker"],
+    "summary": "Backend engineer working across enterprise data-access, archival, visualization, search, and access-control systems.",
+    "impact": [
+      {
+        "problem": "High-throughput enterprise APIs needed predictable latency at scale.",
+        "action": "Architected and scaled Python/Django microservices and backend APIs with cross-functional squads.",
+        "result": "Processed 500,000+ requests monthly with low latency."
+      },
+      {
+        "problem": "Large-scale database workloads had expensive query execution and access patterns.",
+        "action": "Refined complex SQL, indexing strategies, and database access patterns for large datasets.",
+        "result": "Reduced query execution time by 60%."
+      },
+      {
+        "problem": "High-traffic endpoints were creating unnecessary database reads.",
+        "action": "Designed a Redis caching layer using Cache-Aside with least-recently-used eviction.",
+        "result": "Reduced database read load by 40%."
+      }
+    ],
+    "projects": [
+      {
+        "name": "GE Vernova — Data Access Portal",
+        "technologies": ["Python", "Django REST Framework", "SQL"],
+        "bullets": [
+          "Built a financial visualization platform with a natural-language interface for generating custom JSON templates.",
+          "Built SQL-to-JSON query translation and validation pipelines over cloud datasets.",
+          "Automated migration of 130+ blank templates and 10,000 associated reports from EY to GE Vernova."
+        ],
+        "outcome": "Accelerated analysis by 30% while reducing manual validation effort."
+      },
+      {
+        "name": "GE Vernova — Data Archival Portal",
+        "technologies": ["Python", "Django REST Framework", "AWS S3", "Athena", "OpenSearch"],
+        "bullets": [
+          "Architected a low-cost archival platform that migrated metadata to AWS S3 cold storage.",
+          "Implemented row-level security for structured-table queries through AWS Athena.",
+          "Built paginated APIs and OpenSearch-backed full-text search across encrypted files."
+        ],
+        "outcome": "Cut storage costs by 80% across 230 enterprise projects; supported secure exports across 6M files and search across 3M encrypted files."
+      },
+      {
+        "name": "GE Vernova — Vernova Data Portal",
+        "technologies": ["Python", "Django REST Framework", "SQL", "AWS", "Tableau"],
+        "bullets": [
+          "Led the backend revamp of a legacy portal into the Vernova Data Portal.",
+          "Established a hierarchical, domain-based user access model with frontend developers.",
+          "Embedded a custom chatbot alongside Tableau and Spotfire reports using iframes."
+        ],
+        "outcome": "Delivered a modernized portal architecture around domain-based access and embedded analytics."
+      }
+    ]
+  },
+  {
+    "id": "enquero",
+    "company": "Enquero Global LLP (A Genpact Company)",
+    "account": "",
+    "position": "Software Engineering Intern",
+    "duration": "Mar 2023 – Jul 2023",
+    "location": "Bengaluru, India",
+    "technologies": ["Python", "Django", "REST APIs"],
+    "summary": "Built backend APIs for a fitness platform covering subscriptions, session booking, and vitals monitoring.",
+    "impact": [
+      {
+        "problem": "The fitness platform needed backend capabilities for subscription and user-session workflows.",
+        "action": "Engineered RESTful APIs for subscriptions, session booking, and vitals monitoring using Python and Django.",
+        "result": "Increased user engagement by 25%."
+      }
+    ],
+    "projects": []
+  }
+]
