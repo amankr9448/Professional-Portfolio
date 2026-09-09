@@ -28,4 +28,4 @@ EXPOSE 8000
 # Runs migrations on container start, then serves via gunicorn.
 # For real deployments, split "migrate" into a separate release step
 # instead of running it on every container boot.
-CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 3"]

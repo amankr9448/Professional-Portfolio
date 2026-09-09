@@ -1,14 +1,16 @@
 import profile from "@/content/profile.json";
 
 export default function Contact() {
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ?? "";
+
   return (
     <div className="max-w-lg">
       <h1 className="font-display text-3xl font-semibold text-paper lg:text-4xl">Contact</h1>
       <p className="mt-4 text-paper/60">
-        This form posts to the Django API (see /backend). Not wired to a live endpoint yet.
+        Send a message directly through the portfolio API.
       </p>
 
-      <form className="mt-8 space-y-4" action="/api/contact/" method="POST">
+      <form className="mt-8 space-y-4" action={`${apiBaseUrl}/api/contact/`} method="POST">
         <div>
           <label className="font-mono text-xs uppercase tracking-wide text-slate" htmlFor="name">Name</label>
           <input
