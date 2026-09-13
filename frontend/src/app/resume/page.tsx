@@ -51,7 +51,7 @@ export default function Resume() {
 
       <Reveal className="mt-6 grid gap-4 sm:grid-cols-2">
         <section className="rounded-2xl border border-line bg-surface p-6"><p className="section-label">Certifications</p><ul className="mt-4 space-y-2 text-sm text-paper/70">{profile.certifications.map((item) => <li key={item} className="border-l border-steel/50 pl-3">{item}</li>)}</ul></section>
-        <section className="rounded-2xl border border-line bg-surface p-6"><p className="section-label">Achievements & profiles</p><ul className="mt-4 space-y-2 text-sm text-paper/70"><li className="border-l border-steel/50 pl-3">HackWithInfy 2022 Qualified</li><li className="border-l border-steel/50 pl-3">Coding profiles: LeetCode · GeeksForGeeks</li></ul></section>
+        <section className="rounded-2xl border border-line bg-surface p-6"><p className="section-label">Achievements & profiles</p><ul className="mt-4 space-y-2 text-sm text-paper/70"><li className="border-l border-steel/50 pl-3">HackWithInfy 2022 Qualified</li><li className="border-l border-steel/50 pl-3"><a className="evidence-link" href={profile.contact.leetcode} target="_blank" rel="noreferrer">LeetCode</a> · <a className="evidence-link" href={profile.contact.geeksforgeeks} target="_blank" rel="noreferrer">GeeksForGeeks</a></li></ul></section>
       </Reveal>
     </div>
   );

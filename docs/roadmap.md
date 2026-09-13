@@ -7,7 +7,7 @@
 - Both build clean: `cd frontend && npm run build`, `cd backend && python manage.py check`.
 
 ## What's marked TODO in the content
-Resume-backed project, experience, skill, certification and metric content is now populated. Personal project links and deeper architecture evidence remain intentionally blank until the corresponding repositories/diagrams are ready. `projects.json` is seeded with three real project names from your own work (Job Market Intelligence, Job Apply Bot, The Paradigm) -- the engineering detail inside each is yours to add.
+Resume-backed project, experience, skill, certification and metric content is now populated. Personal project links and deeper architecture evidence remain intentionally blank until the corresponding repositories/diagrams are ready. Personal projects now include the Paradigm blog and the YouTube Shorts automation pipeline; the engineering detail inside each is yours to expand.
 
 ## Immediate next steps (in order)
 1. Add verified GitHub/demo/diagram URLs to the evidence fields and deepen the personal-project case studies only where real implementation details are available.

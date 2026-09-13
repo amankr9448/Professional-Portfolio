@@ -7,8 +7,9 @@ const links = [
   { href: "/experience", label: "Experience", code: "02" },
   { href: "/projects", label: "Projects", code: "03" },
   { href: "/skills", label: "Skills", code: "04" },
-  { href: "/resume", label: "Resume", code: "05" },
-  { href: "/contact", label: "Contact", code: "06" },
+  { href: "/resources", label: "Resources", code: "05" },
+  { href: "/resume", label: "Resume", code: "06" },
+  { href: "/contact", label: "Contact", code: "07" },
 ];
 
 export default function SideNav() {
@@ -29,12 +30,6 @@ export default function SideNav() {
             </Link>
           ))}
         </nav>
-      </div>
-
-      <div className="mt-auto border-t border-line pt-5">
-        <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-slate">Current target</p>
-        <p className="mt-2 font-mono text-xs text-paper/70">Backend / Systems</p>
-        <p className="mt-1 font-mono text-[10px] text-steel">50 LPA+</p>
       </div>
     </header>
   );

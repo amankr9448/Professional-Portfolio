@@ -16,7 +16,7 @@
   { "id": "linux", "name": "Linux", "category": "Infrastructure", "evidence": [{ "label": "Listed in production engineering stack", "type": "resume", "href": "/resume" }] },
   { "id": "async", "name": "Asynchronous Workflows", "category": "Distributed", "evidence": [{ "label": "Background-processing experience in backend stack", "type": "resume", "href": "/resume" }] },
   { "id": "queues", "name": "Message Queues", "category": "Distributed", "evidence": [{ "label": "Background-processing and distributed-systems knowledge", "type": "resume", "href": "/resume" }] },
-  { "id": "scheduling", "name": "Task Scheduling", "category": "Distributed", "evidence": [{ "label": "Scheduled data collection in Job Market Intelligence", "type": "project", "href": "/projects#job-market-intelligence" }] },
+  { "id": "scheduling", "name": "Task Scheduling", "category": "Distributed", "evidence": [{ "label": "Scheduled content generation and publishing with GitHub Actions", "type": "project", "href": "/projects#youtube-shorts-pipeline" }] },
   { "id": "system-design", "name": "System Design", "category": "Architecture", "evidence": [{ "label": "Core architecture focus for backend engineering", "type": "resume", "href": "/resume" }] },
   { "id": "distributed", "name": "Distributed Systems", "category": "Architecture", "evidence": [{ "label": "Production microservices, caching, search and cloud data systems", "type": "experience", "href": "/experience#genpact" }] },
   { "id": "rest", "name": "REST APIs", "category": "Architecture", "evidence": [{ "label": "Production APIs in Django and fitness platform services", "type": "experience", "href": "/experience#genpact" }] },

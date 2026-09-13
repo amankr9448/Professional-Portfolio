@@ -34,7 +34,6 @@ export default function Home() {
                 <ProfilePhoto className="h-full w-full" />
               </div>
               <div className="absolute -bottom-4 -left-4 rounded-lg border border-line bg-void px-3 py-2 font-mono text-[10px] text-slate">BENGALURU / INDIA</div>
-              <div className="absolute -right-4 -top-4 rounded-lg border border-line bg-void px-3 py-2 font-mono text-[10px] text-steel">OPEN TO 50LPA+ ROLES</div>
             </div>
           </div>
         </div>
