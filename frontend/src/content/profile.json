@@ -12,13 +12,15 @@
   "summary": "Backend Developer with 3+ years of experience designing scalable backend systems, REST APIs, and data-intensive applications. Skilled in Python, Django, PostgreSQL, Redis, system design, and AWS, with experience across high-throughput microservices and enterprise workloads.",
   "currentlyBuilding": [
     "Deepening system design and distributed-systems fundamentals for backend engineering interviews",
-    "Job Market Intelligence \u2014 scheduled data collection and structured job-market data pipeline",
-    "Job Apply Bot \u2014 automated role matching and resume-tailoring workflow"
+    "Daily YouTube Shorts Pipeline \u2014 automated scripts, captions, uploads and publishing through GitHub Actions",
+    "Paradigm My Blogsite \u2014 writing about backend engineering, systems and the topics I am exploring"
   ],
   "contact": {
     "email": "amankr9448@gmail.com",
     "github": "https://github.com/amankr9448",
-    "linkedin": ""
+    "linkedin": "",
+    "geeksforgeeks": "https://www.geeksforgeeks.org/user/amankr9448/",
+    "leetcode": "https://leetcode.com/u/amankr9448/"
   },
   "metrics": [
     {

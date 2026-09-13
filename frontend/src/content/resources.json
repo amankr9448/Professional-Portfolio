@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Paradigm My Blogsite",
+    "description": "My writing space for backend engineering, systems, programming and other topics I am exploring.",
+    "type": "My blog",
+    "href": "https://my-blogsite-paradigm.vercel.app/"
+  },
+  {
+    "title": "Martin Fowler",
+    "description": "Practical essays on software architecture, refactoring, patterns and delivery.",
+    "type": "Blog",
+    "href": "https://martinfowler.com/"
+  },
+  {
+    "title": "Stripe Engineering",
+    "description": "Engineering stories about APIs, reliability, developer infrastructure and operating at scale.",
+    "type": "Blog",
+    "href": "https://stripe.com/blog/engineering"
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "description": "A foundational book for understanding reliable, scalable and maintainable data systems.",
+    "type": "Book",
+    "href": "https://dataintensive.net/"
+  },
+  {
+    "title": "The Missing Semester of Your CS Education",
+    "description": "A practical course on shell tools, editors, debugging, version control and developer workflows.",
+    "type": "Course",
+    "href": "https://missing.csail.mit.edu/"
+  },
+  {
+    "title": "LeetCode",
+    "description": "My coding profile for data structures, algorithms and interview practice.",
+    "type": "Coding profile",
+    "href": "https://leetcode.com/u/amankr9448/"
+  },
+  {
+    "title": "GeeksForGeeks",
+    "description": "My coding profile and reference library for computer science fundamentals.",
+    "type": "Coding profile",
+    "href": "https://www.geeksforgeeks.org/user/amankr9448/"
+  }
+]

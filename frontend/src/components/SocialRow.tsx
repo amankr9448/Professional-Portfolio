@@ -31,6 +31,8 @@ export default function SocialRow() {
     },
     { href: profile.contact.github, raw: profile.contact.github, icon: <GithubMark />, label: "GitHub" },
     { href: profile.contact.linkedin, raw: profile.contact.linkedin, icon: <LinkedinMark />, label: "LinkedIn" },
+    { href: profile.contact.leetcode, raw: profile.contact.leetcode, icon: <span className="font-mono text-[10px] font-semibold">LC</span>, label: "LeetCode" },
+    { href: profile.contact.geeksforgeeks, raw: profile.contact.geeksforgeeks, icon: <span className="font-mono text-[10px] font-semibold">GFG</span>, label: "GeeksForGeeks" },
   ].filter((l) => isRealLink(l.raw));
 
   if (links.length === 0) return null;
