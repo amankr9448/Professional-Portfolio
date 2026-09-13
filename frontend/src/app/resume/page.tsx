@@ -49,9 +49,36 @@ export default function Resume() {
         <div className="mt-5 flex flex-wrap gap-2">{skills.map((skill) => <TechPill key={skill.id} name={skill.name} />)}</div>
       </Reveal>
 
-      <Reveal className="mt-6 grid gap-4 sm:grid-cols-2">
-        <section className="rounded-2xl border border-line bg-surface p-6"><p className="section-label">Certifications</p><ul className="mt-4 space-y-2 text-sm text-paper/70">{profile.certifications.map((item) => <li key={item} className="border-l border-steel/50 pl-3">{item}</li>)}</ul></section>
-        <section className="rounded-2xl border border-line bg-surface p-6"><p className="section-label">Achievements & profiles</p><ul className="mt-4 space-y-2 text-sm text-paper/70"><li className="border-l border-steel/50 pl-3">HackWithInfy 2022 Qualified</li><li className="border-l border-steel/50 pl-3"><a className="evidence-link" href={profile.contact.leetcode} target="_blank" rel="noreferrer">LeetCode</a> · <a className="evidence-link" href={profile.contact.geeksforgeeks} target="_blank" rel="noreferrer">GeeksForGeeks</a></li></ul></section>
+      <Reveal className="mt-6 rounded-2xl border border-line bg-surface p-6 lg:p-7">
+        <div className="flex items-center justify-between gap-4">
+          <p className="section-label">Certificates</p>
+          <span className="font-mono text-[10px] uppercase tracking-wide text-slate">Verified links from resume</span>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {profile.certifications.map((certificate) => (
+            <a
+              key={certificate.name}
+              href={certificate.href}
+              target="_blank"
+              rel="noreferrer"
+              className="lift group rounded-xl border border-line bg-void p-4"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <h2 className="font-display text-lg text-paper">{certificate.name}</h2>
+                <span className="font-mono text-xs text-steel transition-transform group-hover:translate-x-1">↗</span>
+              </div>
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-wide text-slate">{certificate.issuer}</p>
+            </a>
+          ))}
+        </div>
+      </Reveal>
+
+      <Reveal className="mt-6 rounded-2xl border border-line bg-surface p-6">
+        <p className="section-label">Achievements & profiles</p>
+        <ul className="mt-4 space-y-2 text-sm text-paper/70">
+          <li className="border-l border-steel/50 pl-3">HackWithInfy 2022 Qualified</li>
+          <li className="border-l border-steel/50 pl-3"><a className="evidence-link" href={profile.contact.leetcode} target="_blank" rel="noreferrer">LeetCode</a> · <a className="evidence-link" href={profile.contact.geeksforgeeks} target="_blank" rel="noreferrer">GeeksForGeeks</a></li>
+        </ul>
       </Reveal>
     </div>
   );
