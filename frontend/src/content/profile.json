@@ -41,10 +41,31 @@
     }
   ],
   "certifications": [
-    "Microsoft Certified: Azure Fundamentals (AZ-900)",
-    "Databricks Certified Data Engineer Associate",
-    "Agentic AI - Fundamentals",
-    "Generative AI - Fundamentals"
+    {
+      "name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "href": "https://learn.microsoft.com/en-us/users/amankumar-0059/credentials/8a3a53fce14f0f7e"
+    },
+    {
+      "name": "Databricks Certified Data Engineer Associate",
+      "issuer": "Databricks",
+      "href": "https://credentials.databricks.com/b9fff46e-07f5-4e89-b7e0-8616d1bcfcdd"
+    },
+    {
+      "name": "Agentic AI - Fundamentals",
+      "issuer": "Certification",
+      "href": "https://d1a5x01xrt55f1.cloudfront.net/kPYxSpBr"
+    },
+    {
+      "name": "Generative AI - Fundamentals",
+      "issuer": "Certification",
+      "href": "https://d1a5x01xrt55f1.cloudfront.net/wZgtfTHI"
+    },
+    {
+      "name": "Software Engineering Internship Completion",
+      "issuer": "Enquero Global LLP (A Genpact Company)",
+      "href": "https://github.com/amankr9448/Enquero--Genpact-Internship-Completion-Certificate"
+    }
   ],
   "education": {
     "institution": "Nitte Meenakshi Institute of Technology",

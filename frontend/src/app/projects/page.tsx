@@ -55,6 +55,44 @@ export default function Projects() {
                 <div>
                   <h3 className="section-label">Architecture</h3>
                   <p className="mt-2 text-sm leading-relaxed text-paper/70">{project.architecture}</p>
+                  {project.id === "ge-data-archival" && (
+                    <div className="mt-5 space-y-4">
+                      <div className="rounded-xl border border-line bg-void p-4">
+                        <p className="section-label">Controlled export flow</p>
+                        <div className="mt-4 flex flex-wrap items-center gap-2 font-mono text-[10px] text-paper/75">
+                          {["User", "Django API", "Authorization", "AWS Lambda", "Protected Storage", "Decryption", "Django Streaming", "User"].map((step, index) => (
+                            <span key={`${step}-${index}`} className="flex items-center gap-2">
+                              <span className="rounded-md border border-steel/40 bg-surface px-2 py-1">{step}</span>
+                              {index < 7 && <span className="text-ochre">→</span>}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="rounded-xl border border-line bg-void p-4">
+                        <p className="section-label">Protected-data query flow</p>
+                        <div className="mt-4 flex flex-wrap items-center gap-2 font-mono text-[10px] text-paper/75">
+                          {["User", "Django API", "Authorization / RLS", "Athena", "Trigram Filtering", "Results"].map((step, index) => (
+                            <span key={step} className="flex items-center gap-2">
+                              <span className="rounded-md border border-steel/40 bg-surface px-2 py-1">{step}</span>
+                              {index < 5 && <span className="text-ochre">→</span>}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {"security" in project && (
+                    <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                      <div>
+                        <h3 className="section-label">Security</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-paper/70">{project.security}</p>
+                      </div>
+                      <div>
+                        <h3 className="section-label">Data & search strategy</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-paper/70">{project.dataStrategy}</p>
+                      </div>
+                    </div>
+                  )}
                   {project.decisions.length > 0 && (
                     <div className="mt-5 rounded-xl border border-line bg-void p-4">
                       <h3 className="section-label">Trade-offs</h3>
@@ -71,6 +109,7 @@ export default function Projects() {
                 </div>
                 <div>
                   <h3 className="section-label">Outcome</h3>
+                  {"scale" in project && <><h3 className="mt-2 section-label">Scale</h3><p className="mt-2 text-sm leading-relaxed text-paper/70">{project.scale}</p></>}
                   <p className="mt-2 text-sm leading-relaxed text-paper/70">{project.lessons}</p>
                 </div>
               </div>
