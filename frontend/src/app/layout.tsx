@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FloatingNav from "@/components/FloatingNav";
+import FloatingAskMe from "@/components/FloatingAskMe";
 import SideNav from "@/components/SideNav";
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </main>
         </div>
         <FloatingNav />
+        <FloatingAskMe />
       </body>
     </html>
   );
