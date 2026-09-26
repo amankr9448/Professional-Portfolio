@@ -85,7 +85,16 @@ def chat(request):
     try:
         with urlopen(groq_request, timeout=25) as response:
             data = json.load(response)
-    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+    except HTTPError as error:
+        error_body = error.read(4096).decode("utf-8", errors="replace")
+        if api_key in error_body:
+            error_body = error_body.replace(api_key, "[REDACTED]")
+        print(f"Groq assistant request failed: HTTP {error.code}: {error_body}")
+        return Response(
+            {"reply": "The assistant is temporarily unavailable. Please try again shortly."},
+            status=status.HTTP_502_BAD_GATEWAY,
+        )
+    except (URLError, TimeoutError, json.JSONDecodeError) as error:
         print(f"Groq assistant request failed: {error}")
         return Response(
             {"reply": "The assistant is temporarily unavailable. Please try again shortly."},
