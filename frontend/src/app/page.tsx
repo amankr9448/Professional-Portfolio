@@ -3,7 +3,6 @@ import profile from "@/content/profile.json";
 import skills from "@/content/skills.json";
 import projects from "@/content/projects.json";
 import Reveal from "@/components/Reveal";
-import ProfilePhoto from "@/components/ProfilePhoto";
 import SocialRow from "@/components/SocialRow";
 import TechPill from "@/components/TechPill";
 
@@ -30,8 +29,27 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <div className="relative mx-auto max-w-md">
               <div className="absolute -inset-3 -z-10 border border-line/70" />
-              <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-surface">
-                <ProfilePhoto className="h-full w-full" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-surface p-6 sm:p-8">
+                <div className="absolute inset-0 opacity-40" aria-hidden="true">
+                  <div className="h-full w-full bg-[linear-gradient(var(--line)_1px,transparent_1px),linear-gradient(90deg,var(--line)_1px,transparent_1px)] bg-[size:32px_32px]" />
+                </div>
+                <div className="relative flex h-full flex-col justify-between">
+                  <div className="flex items-center justify-between border-b border-line pb-4">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate">Identity / 001</span>
+                    <span className="h-2 w-2 rounded-full bg-ochre shadow-[0_0_12px_var(--ochre)]" aria-label="Available" />
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Aman Kumar</p>
+                    <p className="mt-3 font-display text-6xl font-semibold leading-none text-paper sm:text-8xl">AK</p>
+                    <p className="mt-5 max-w-xs font-mono text-xs leading-relaxed text-slate">
+                      Building reliable systems, APIs, and infrastructure for products that need to scale.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3 border-t border-line pt-4 font-mono text-[10px] uppercase tracking-wide text-slate">
+                    <span>Python / Django</span>
+                    <span className="text-right">Cloud / Data</span>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-4 -left-4 rounded-lg border border-line bg-void px-3 py-2 font-mono text-[10px] text-slate">BENGALURU / INDIA</div>
             </div>
