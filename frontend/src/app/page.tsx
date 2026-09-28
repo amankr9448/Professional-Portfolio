@@ -22,7 +22,8 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/65">{profile.summary}</p>
             <div className="mt-7"><SocialRow /></div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/resume" className="rounded-lg bg-paper px-5 py-3 font-mono text-sm font-medium text-void transition hover:brightness-90">View resume</Link>
+              <Link href="/contact" className="rounded-lg bg-paper px-5 py-3 font-mono text-sm font-medium text-void transition hover:brightness-90">Contact me</Link>
+              <a href="/resume.pdf" download className="rounded-lg border border-line bg-surface/60 px-5 py-3 font-mono text-sm text-paper/80 transition hover:border-steel hover:text-paper">Download resume</a>
               <Link href="/projects" className="rounded-lg border border-line bg-surface/60 px-5 py-3 font-mono text-sm text-paper/80 transition hover:border-steel hover:text-paper">Explore engineering work</Link>
             </div>
           </div>
@@ -58,6 +59,7 @@ export default function Home() {
       </section>
 
       <Reveal className="mt-16">
+        <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-slate">Selected production outcomes · details in experience and case studies</p>
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
           {profile.metrics.map((metric) => (
             <div key={metric.label} className="bg-surface px-4 py-5">

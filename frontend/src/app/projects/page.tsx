@@ -30,6 +30,20 @@ export default function Projects() {
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => <TechPill key={tech} name={tech} />)}
                 </div>
+                {(project.evidence.github || project.evidence.demo) && (
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                    {project.evidence.github && (
+                      <a href={project.evidence.github} target="_blank" rel="noreferrer" className="evidence-link font-mono text-xs">
+                        GitHub repository / README
+                      </a>
+                    )}
+                    {project.evidence.demo && (
+                      <a href={project.evidence.demo} target="_blank" rel="noreferrer" className="evidence-link font-mono text-xs">
+                        Open live demo
+                      </a>
+                    )}
+                  </div>
+                )}
                 {project.metrics.length > 0 && (
                   <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
                     {project.metrics.map((metric) => (

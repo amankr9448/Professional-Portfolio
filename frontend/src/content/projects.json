@@ -93,7 +93,7 @@
       { "question": "Why static + Django API?", "answer": "Most portfolio content does not change per request, so static delivery is a better fit; Django remains only where server-side behavior adds value." },
       { "question": "Why evidence links?", "answer": "The portfolio should make technical claims inspectable instead of asking a recruiter or interviewer to take them on faith." }
     ],
-    "evidence": { "github": "", "demo": "", "diagram": "" },
+    "evidence": { "github": "https://github.com/amankr9448/Professional-Portfolio", "demo": "", "diagram": "" },
     "lessons": "Content quality comes before the AI assistant: retrieval is only useful when there is real engineering material to ground it on.",
     "technologies": ["Next.js", "Django", "PostgreSQL", "Redis", "Docker"],
     "metrics": []

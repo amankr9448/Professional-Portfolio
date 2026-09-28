@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="max-w-lg">
       <h1 className="font-display text-3xl font-semibold text-paper lg:text-4xl">Contact</h1>
       <p className="mt-4 text-paper/60">
-        Send a message directly through the portfolio API.
+        Interested in backend engineering opportunities or want to discuss my work? Send me a message.
       </p>
 
       <form className="mt-8 space-y-4" action={`${apiBaseUrl}/api/contact/`} method="POST">
@@ -40,11 +40,15 @@ export default function Contact() {
         </button>
       </form>
 
-      <div className="mt-10 flex flex-col gap-1 font-mono text-sm text-paper/70">
-        <span className="text-slate">Or reach out directly:</span>
-        <span>{profile.contact.email}</span>
-        <span>{profile.contact.github}</span>
-        <span>{profile.contact.linkedin}</span>
+      <div className="mt-10 flex flex-col items-start gap-2 font-mono text-sm text-paper/70">
+        <span className="mb-1 text-slate">Or reach out directly:</span>
+        <a className="evidence-link" href={`mailto:${profile.contact.email}`}>{profile.contact.email}</a>
+        {profile.contact.github && (
+          <a className="evidence-link" href={profile.contact.github} target="_blank" rel="noreferrer">GitHub profile</a>
+        )}
+        {profile.contact.linkedin && (
+          <a className="evidence-link" href={profile.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn profile</a>
+        )}
       </div>
     </div>
   );
